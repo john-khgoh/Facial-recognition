@@ -1,0 +1,13 @@
+python3 xml_to_csv.py -i "C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\images\train" -o "C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\train_labels.csv"
+
+python xml_to_csv.py -i "C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\images\test" -o "C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\test_labels.csv"
+
+python3 generate_tfrecord.py --label=hand_near_face --csv_input="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\train_labels.csv" --img_path="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\images\train"  --output_path="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\train.record"
+
+python3 generate_tfrecord.py --label=hand_near_face --csv_input="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\test_labels.csv" --img_path="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\images\test"  --output_path="C:\Users\Johngoh\Documents\Project 2018\08_imagerec_git\hand_near_face\Tensorflow\workspace\training_demo\annotations\test.record"
+
+python3 export_inference_graph.py --input_type image_tensor --pipeline_config_path training/ssd_inception_v2_coco.config --trained_checkpoint_prefix training/model.ckpt-10367 --output_directory trained-inference-graphs/output_inference_graph_v2.pb
+
+python3 train.py --logtostderr --train_dir=training/ --pipeline_config_path=training/ssd_inception_v2_coco.config
+
+python3 converter.py --input frozen_inference_graph.pb --config pipeline.config --output output_folder/output.pbtxt
