@@ -1,0 +1,38 @@
+<annotation>
+	<folder>train</folder>
+	<filename>img402.jpg</filename>
+	<path>C:\Users\Johngoh\Documents\Project 2018\07_imagerec\Tensorflow\workspace\training_demo\images\train\img402.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>220</width>
+		<height>229</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hand_near_face</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>123</xmin>
+			<ymin>27</ymin>
+			<xmax>214</xmax>
+			<ymax>141</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>hand_near_face</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>3</xmin>
+			<ymin>72</ymin>
+			<xmax>98</xmax>
+			<ymax>203</ymax>
+		</bndbox>
+	</object>
+</annotation>

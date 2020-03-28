@@ -1,0 +1,38 @@
+<annotation>
+	<folder>new</folder>
+	<filename>img74.jpg</filename>
+	<path>C:\Users\Johngoh\Documents\Project 2018\07_imagerec\Tensorflow\workspace\training_demo\images\train\new\img74.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>263</width>
+		<height>192</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hand_near_face</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>173</xmin>
+			<ymin>60</ymin>
+			<xmax>214</xmax>
+			<ymax>130</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>hand_near_face</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>111</xmin>
+			<ymin>60</ymin>
+			<xmax>170</xmax>
+			<ymax>116</ymax>
+		</bndbox>
+	</object>
+</annotation>
